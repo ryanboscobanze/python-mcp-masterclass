@@ -1,0 +1,154 @@
+{
+  "meta": null,
+  "nextCursor": null,
+  "tools": [
+    {
+      "name": "double_servings",
+      "title": null,
+      "description": "Double the number of servings for a recipe",
+      "inputSchema": {
+        "properties": {
+          "servings": {
+            "title": "Servings",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "servings"
+        ],
+        "title": "double_servingsArguments",
+        "type": "object"
+      },
+      "outputSchema": {
+        "properties": {
+          "result": {
+            "title": "Result",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "result"
+        ],
+        "title": "double_servingsOutput",
+        "type": "object"
+      },
+      "icons": null,
+      "annotations": null,
+      "meta": null,
+      "execution": null
+    },
+    {
+      "name": "list_dishes",
+      "title": null,
+      "description": "List all available dishes - returns list[str]",
+      "inputSchema": {
+        "properties": {},
+        "title": "list_dishesArguments",
+        "type": "object"
+      },
+      "outputSchema": {
+        "properties": {
+          "result": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Result",
+            "type": "array"
+          }
+        },
+        "required": [
+          "result"
+        ],
+        "title": "list_dishesOutput",
+        "type": "object"
+      },
+      "icons": null,
+      "annotations": null,
+      "meta": null,
+      "execution": null
+    },
+    {
+      "name": "suggest_wine",
+      "title": "Wine Pairing Suggester",
+      "description": "Suggest a wine that pairs well with a dish",
+      "inputSchema": {
+        "properties": {
+          "dish": {
+            "title": "Dish",
+            "type": "string"
+          }
+        },
+        "required": [
+          "dish"
+        ],
+        "title": "suggest_wineArguments",
+        "type": "object"
+      },
+      "outputSchema": {
+        "properties": {
+          "result": {
+            "title": "Result",
+            "type": "string"
+          }
+        },
+        "required": [
+          "result"
+        ],
+        "title": "suggest_wineOutput",
+        "type": "object"
+      },
+      "icons": null,
+      "annotations": null,
+      "meta": null,
+      "execution": null
+    },
+    {
+      "name": "scale_recipe",
+      "title": null,
+      "description": "Scale a recipe to a target number of servings",
+      "inputSchema": {
+        "properties": {
+          "dish": {
+            "description": "Name of the dish to scale",
+            "title": "Dish",
+            "type": "string"
+          },
+          "servings": {
+            "default": 4,
+            "description": "Target number of servings",
+            "title": "Servings",
+            "type": "integer"
+          },
+          "unit": {
+            "default": "metric",
+            "description": "Unit system: 'metric' or 'imperial'",
+            "title": "Unit",
+            "type": "string"
+          }
+        },
+        "required": [
+          "dish"
+        ],
+        "title": "scale_recipeArguments",
+        "type": "object"
+      },
+      "outputSchema": {
+        "properties": {
+          "result": {
+            "title": "Result",
+            "type": "string"
+          }
+        },
+        "required": [
+          "result"
+        ],
+        "title": "scale_recipeOutput",
+        "type": "object"
+      },
+      "icons": null,
+      "annotations": null,
+      "meta": null,
+      "execution": null
+    }
+  ]
+}

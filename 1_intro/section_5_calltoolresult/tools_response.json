@@ -1,0 +1,181 @@
+{
+  "meta": null,
+  "nextCursor": null,
+  "tools": [
+    {
+      "name": "check_pantry",
+      "title": null,
+      "description": "Check if an ingredient is available in the pantry",
+      "inputSchema": {
+        "properties": {
+          "ingredient": {
+            "title": "Ingredient",
+            "type": "string"
+          }
+        },
+        "required": [
+          "ingredient"
+        ],
+        "title": "check_pantryArguments",
+        "type": "object"
+      },
+      "outputSchema": null,
+      "icons": null,
+      "annotations": null,
+      "meta": null,
+      "execution": null
+    },
+    {
+      "name": "get_recipe_card",
+      "title": null,
+      "description": "Return a recipe card as an embedded resource",
+      "inputSchema": {
+        "properties": {
+          "dish": {
+            "title": "Dish",
+            "type": "string"
+          }
+        },
+        "required": [
+          "dish"
+        ],
+        "title": "get_recipe_cardArguments",
+        "type": "object"
+      },
+      "outputSchema": null,
+      "icons": null,
+      "annotations": null,
+      "meta": null,
+      "execution": null
+    },
+    {
+      "name": "generate_serving_chart",
+      "title": null,
+      "description": "Generate a placeholder chart image for the given number of servings",
+      "inputSchema": {
+        "properties": {
+          "servings": {
+            "title": "Servings",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "servings"
+        ],
+        "title": "generate_serving_chartArguments",
+        "type": "object"
+      },
+      "outputSchema": null,
+      "icons": null,
+      "annotations": null,
+      "meta": null,
+      "execution": null
+    },
+    {
+      "name": "create_recipe_label",
+      "title": null,
+      "description": "Create a simple recipe label image for a dish using the FastMCP Image class",
+      "inputSchema": {
+        "properties": {
+          "dish": {
+            "title": "Dish",
+            "type": "string"
+          }
+        },
+        "required": [
+          "dish"
+        ],
+        "title": "create_recipe_labelArguments",
+        "type": "object"
+      },
+      "outputSchema": null,
+      "icons": null,
+      "annotations": null,
+      "meta": null,
+      "execution": null
+    },
+    {
+      "name": "get_dish_info",
+      "title": null,
+      "description": "Return dish description; _meta carries client-only metadata not visible to the model.",
+      "inputSchema": {
+        "properties": {
+          "dish": {
+            "title": "Dish",
+            "type": "string"
+          }
+        },
+        "required": [
+          "dish"
+        ],
+        "title": "get_dish_infoArguments",
+        "type": "object"
+      },
+      "outputSchema": null,
+      "icons": null,
+      "annotations": null,
+      "meta": null,
+      "execution": null
+    },
+    {
+      "name": "clear_added_dishes",
+      "title": null,
+      "description": "Remove all dynamically added dishes and return empty content as a completion signal.",
+      "inputSchema": {
+        "properties": {},
+        "title": "clear_added_dishesArguments",
+        "type": "object"
+      },
+      "outputSchema": null,
+      "icons": null,
+      "annotations": null,
+      "meta": null,
+      "execution": null
+    },
+    {
+      "name": "get_validated_macros",
+      "title": null,
+      "description": "Return macro summary; FastMCP validates structuredContent against MacroSummary at the schema level.",
+      "inputSchema": {
+        "properties": {
+          "dish": {
+            "title": "Dish",
+            "type": "string"
+          }
+        },
+        "required": [
+          "dish"
+        ],
+        "title": "get_validated_macrosArguments",
+        "type": "object"
+      },
+      "outputSchema": {
+        "properties": {
+          "dish": {
+            "title": "Dish",
+            "type": "string"
+          },
+          "dominant_macro": {
+            "title": "Dominant Macro",
+            "type": "string"
+          },
+          "balance_score": {
+            "title": "Balance Score",
+            "type": "number"
+          }
+        },
+        "required": [
+          "dish",
+          "dominant_macro",
+          "balance_score"
+        ],
+        "title": "MacroSummary",
+        "type": "object"
+      },
+      "icons": null,
+      "annotations": null,
+      "meta": null,
+      "execution": null
+    }
+  ]
+}

@@ -1,0 +1,243 @@
+{
+  "meta": null,
+  "nextCursor": null,
+  "tools": [
+    {
+      "name": "get_nutrition",
+      "title": null,
+      "description": "Get basic nutrition info for a dish",
+      "inputSchema": {
+        "properties": {
+          "dish": {
+            "title": "Dish",
+            "type": "string"
+          }
+        },
+        "required": [
+          "dish"
+        ],
+        "title": "get_nutritionArguments",
+        "type": "object"
+      },
+      "outputSchema": {
+        "properties": {
+          "dish": {
+            "title": "Dish",
+            "type": "string"
+          },
+          "calories": {
+            "title": "Calories",
+            "type": "number"
+          },
+          "protein_g": {
+            "title": "Protein G",
+            "type": "number"
+          },
+          "carbs_g": {
+            "title": "Carbs G",
+            "type": "number"
+          }
+        },
+        "required": [
+          "dish",
+          "calories",
+          "protein_g",
+          "carbs_g"
+        ],
+        "title": "NutritionInfo",
+        "type": "object"
+      },
+      "icons": null,
+      "annotations": null,
+      "meta": null,
+      "execution": null
+    },
+    {
+      "name": "get_cooking_time",
+      "title": null,
+      "description": "Get estimated cooking time for a dish - returns TypedDict",
+      "inputSchema": {
+        "properties": {
+          "dish": {
+            "title": "Dish",
+            "type": "string"
+          }
+        },
+        "required": [
+          "dish"
+        ],
+        "title": "get_cooking_timeArguments",
+        "type": "object"
+      },
+      "outputSchema": {
+        "properties": {
+          "prep_minutes": {
+            "title": "Prep Minutes",
+            "type": "integer"
+          },
+          "cook_minutes": {
+            "title": "Cook Minutes",
+            "type": "integer"
+          },
+          "total_minutes": {
+            "title": "Total Minutes",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "prep_minutes",
+          "cook_minutes",
+          "total_minutes"
+        ],
+        "title": "CookingTime",
+        "type": "object"
+      },
+      "icons": null,
+      "annotations": null,
+      "meta": null,
+      "execution": null
+    },
+    {
+      "name": "get_macro_ratios",
+      "title": null,
+      "description": "Get macronutrient ratio percentages for a dish - returns dict[str, float]",
+      "inputSchema": {
+        "properties": {
+          "dish": {
+            "title": "Dish",
+            "type": "string"
+          }
+        },
+        "required": [
+          "dish"
+        ],
+        "title": "get_macro_ratiosArguments",
+        "type": "object"
+      },
+      "outputSchema": {
+        "additionalProperties": {
+          "type": "number"
+        },
+        "title": "get_macro_ratiosDictOutput",
+        "type": "object"
+      },
+      "icons": null,
+      "annotations": null,
+      "meta": null,
+      "execution": null
+    },
+    {
+      "name": "get_dish_rating",
+      "title": null,
+      "description": "Get a crowd-sourced rating for a dish \u2014 returns plain class with class-level annotations",
+      "inputSchema": {
+        "properties": {
+          "dish": {
+            "title": "Dish",
+            "type": "string"
+          }
+        },
+        "required": [
+          "dish"
+        ],
+        "title": "get_dish_ratingArguments",
+        "type": "object"
+      },
+      "outputSchema": {
+        "properties": {
+          "dish": {
+            "title": "Dish",
+            "type": "string"
+          },
+          "score": {
+            "title": "Score",
+            "type": "integer"
+          },
+          "reviewer": {
+            "title": "Reviewer",
+            "type": "string"
+          }
+        },
+        "required": [
+          "dish",
+          "score",
+          "reviewer"
+        ],
+        "title": "DishRating",
+        "type": "object"
+      },
+      "icons": null,
+      "annotations": null,
+      "meta": null,
+      "execution": null
+    },
+    {
+      "name": "get_substitute",
+      "title": null,
+      "description": "Get a baking substitute for an ingredient - returns class with type hints",
+      "inputSchema": {
+        "properties": {
+          "ingredient": {
+            "title": "Ingredient",
+            "type": "string"
+          }
+        },
+        "required": [
+          "ingredient"
+        ],
+        "title": "get_substituteArguments",
+        "type": "object"
+      },
+      "outputSchema": {
+        "properties": {
+          "original": {
+            "title": "Original",
+            "type": "string"
+          },
+          "substitute": {
+            "title": "Substitute",
+            "type": "string"
+          },
+          "ratio": {
+            "title": "Ratio",
+            "type": "string"
+          }
+        },
+        "required": [
+          "original",
+          "substitute",
+          "ratio"
+        ],
+        "title": "IngredientSubstitute",
+        "type": "object"
+      },
+      "icons": null,
+      "annotations": null,
+      "meta": null,
+      "execution": null
+    },
+    {
+      "name": "get_recipe_note",
+      "title": null,
+      "description": "Get a note for a dish \u2014 class WITHOUT type hints returns unstructured output, no schema generated",
+      "inputSchema": {
+        "properties": {
+          "dish": {
+            "title": "Dish",
+            "type": "string"
+          }
+        },
+        "required": [
+          "dish"
+        ],
+        "title": "get_recipe_noteArguments",
+        "type": "object"
+      },
+      "outputSchema": null,
+      "icons": null,
+      "annotations": null,
+      "meta": null,
+      "execution": null
+    }
+  ]
+}
