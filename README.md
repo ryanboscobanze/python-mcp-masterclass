@@ -2,6 +2,10 @@
 
 A hands-on course for learning the **Model Context Protocol (MCP)** with Python. You will build MCP servers and clients from scratch, starting with the Anthropic API fundamentals and progressing through all major MCP concepts.
 
+## Chapters
+
+- [Chapter 0: Environment Setup](chapter_0.md)
+
 ---
 
 ## Prerequisites
@@ -49,7 +53,7 @@ uv venv --python 3.11
 **6. Install required packages**
 
 ```powershell
-uv pip install "mcp[cli]" ipykernel pillow anthropic
+uv pip install "mcp[cli]" ipykernel pillow anthropic uvicorn uvicorn
 ```
 
 **7. Verify MCP is installed**
@@ -112,7 +116,7 @@ source .venv/bin/activate
 **6. Install required packages**
 
 ```bash
-uv pip install "mcp[cli]" ipykernel pillow anthropic
+uv pip install "mcp[cli]" ipykernel pillow anthropic uvicorn
 ```
 
 **7. Verify MCP is installed**
