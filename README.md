@@ -1,7 +1,11 @@
 
 # Python MCP Masterclass
 
-A hands-on course covering the Model Context Protocol (MCP) with Python — from LLM function calling fundamentals through advanced low-level server implementations.
+A hands-on course covering the Model Context Protocol (MCP) with Python .
+
+> The MCP spec just dropped a major release candidate with changes to several patterns (tasks, elicitation, sampling, logging) within the next 10 weeks. `1_intro` is already covered in full on YouTube — that stable core (tools, resources, prompts, structured output, transports, pagination) isn't going anywhere. The priority now is building against the next version of the spec. 
+>
+> **What's in this repo.** Most modules are adapted from the [official python-sdk examples](https://github.com/modelcontextprotocol/python-sdk/tree/main/examples) and converted into paired `server.py` / `client.py` teaching files — one pattern per folder, easy to run and follow. A handful of modules are still missing (notably OAuth), which will be added in a future update.
 
 ---
 
