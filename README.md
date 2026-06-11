@@ -2,6 +2,8 @@
 # Python MCP Masterclass
 
 A hands-on course covering the Model Context Protocol (MCP) with Python .
+This repo pairs every server with a runnable client, one pattern per folder, so you can see both sides of the protocol.
+Coming up: OAuth, updated tasks/elicitation per the new RC.
 
 > The MCP spec just dropped a major release candidate with changes to several patterns (tasks, elicitation, sampling, logging) within the next 10 weeks. `1_intro` is already covered in full on YouTube — that stable core (tools, resources, prompts, structured output, transports, pagination) isn't going anywhere. The priority now is building against the next version of the spec. 
 >
